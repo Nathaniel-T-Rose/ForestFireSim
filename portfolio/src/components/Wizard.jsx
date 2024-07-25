@@ -16,7 +16,7 @@ const CatMage = ( {scale, position}) => {
         ref={catRef}
         position={position}
         scale={scale}
-        rotation={[0.05,-.7,0]}
+        rotation={[0.05,-0.7,0]}
     >
         <primitive object={scene} />
     </mesh>
@@ -27,7 +27,7 @@ const WizardScene = ({scrollContainer}) => {
   const [rotationX, setRotationX] = useState(0);
   const [rotationY, setRotationY] = useState(0);
   const [scale, setScale] = useState([0,0,0]);
-  const [position, setPosition] = useState([0.25, -1.75, 0.2])
+  const [position, setPosition] = useState([1.75, -1.75, -0.5])
 
 
   const handleScroll = () => {
@@ -41,19 +41,19 @@ const WizardScene = ({scrollContainer}) => {
   const handleResize = () => {
     if (window.innderWidth < 768) {
       setScale([1,1,1]);
-      setPosition([0.2, -1.3, 0]);
+      setPosition([3, -1.3, -0.5]);
     } else if (window.innerWidth < 1024){
       setScale([1.33,1.33,1.33]);
-      setPosition([0.2, -1.5, 0]);
+      setPosition([2.25, -1.5, -0.5]);
     } else if (window.innerWidth < 1280){
       setScale([1.5,1.5,1.5]);
-      setPosition([0.2, -1.85, 0]);
+      setPosition([2.0, -1.85, -0.5]);
     } else if (window.innerWidth < 1536) {
       setScale([1.66,1.66,1.66]);
-      setPosition([0.2, -2.5, 0]);
+      setPosition([1.75, -2.5, -0.5]);
     } else {
       setScale([2,2,2]);
-      setPosition([0.2, -2.75, 0])
+      setPosition([1.75, -2.75, -0.5])
     } 
   };
 
@@ -65,7 +65,6 @@ const WizardScene = ({scrollContainer}) => {
 
   return (
     <Canvas 
-      className={'w-full h-full bg-transparent z-10'} 
       camera={{ near: 0.01, far: 1000}} 
     >
       <Suspense>
@@ -79,7 +78,8 @@ const WizardScene = ({scrollContainer}) => {
           rotationY={rotationY}
           scale={scale}
           position={position}
-        ></CatMage>
+          className={'position: relative; top: 0; left: 9%;'}
+        />
       </Suspense>
     </Canvas>
   );

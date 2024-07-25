@@ -1,25 +1,44 @@
 import React from 'react'
 import {WizardCanvas} from '.';
+
+import '../styles/hero.scss';
+
 const Hero = ({scrollContainer}) => {
   return (
-    <div className=''>
+    <div className='section'>
       <div id='hero' className='header' >
-        <div className='header_content absolute top-[10%] sm:top-[16%] lg:top-[24%]
-        w-full mx-auto lg:pl-[38vh] lg:pr-[30vh] xl:pl-96 xl:pr-72 2xl:px-40 3xl:px-60 flex
-        flex-col lg:flex-row items-start z-10'>
-        <div className="flex-1 lg:mb-0">
-          <h1 className='font-medium text-white text-[40px] xs:text-[50px] sm:text-[68px]
-          md:text-[80px] lg:text-[100px] 2xl:text-[180px] leading-[100px] 2xl:leading-[150px]'>
-            Nathaniel Rose 
-          </h1>
+        <div className='header_content'>
+          <div className='header_green'>
+          <div className="header_name ">
+              <h1 className='glitch' data-text='Nathaniel Rose'>
+                Nathaniel Rose 
+              </h1>
+              <p className='glitch' data-text='Software Developer'>Software Developer</p>
+          </div>
+            <img src='src/assets/background.png' alt='' className='header_background' 
+            />
+            <div className='header_cat'>
+              <WizardCanvas scrollContainer={scrollContainer} />
+            </div>
+          </div>
+          <div className='header_box'>
+            <img src='src/assets/textbox.png' alt=''  className='header_background'/>
+            <div className='header_text'>
+              <span className='glitch' data-text='Nathaniel:'>
+              <b>{`Nathaniel: ${' '}`}</b>
+              </span>
+              <span className='typewriter'>
+                Hey there! I'm a full-stack software developer and nostalgia connoisseur with a keen interest in all things web dev.     
+              </span>
+            </div>
+            <div className='header_nav'>
+              <div><i class="arrow right"></i>Projects</div>
+              <div><i class="arrow right"></i>Experience</div>
+              <div><i class="arrow right"></i>Contact</div>
+            </div>
+          </div>
         </div>
-        </div>
-        
-        <img src='src/assets/background.png' alt='' 
-             className='header_green'
-        />
-        <WizardCanvas scrollContainer={scrollContainer} />
-    </div>
+      </div>
     </div>
   )
 }
