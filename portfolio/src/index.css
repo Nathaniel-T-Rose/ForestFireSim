@@ -80,6 +80,7 @@
   max-height: 600px;
   display: flex;
   width: 100vw;
+
 }
 
 .header_cat {
@@ -110,10 +111,20 @@
   font-size: 3vw;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
   position: absolute;
   bottom:25%;
-  margin: 0px 11.5vw;
+  justify-items: center;
+  align-items: center;
 
   color: white;
+}
+
+.visible {
+  display: inline-block;
+  text-decoration: underline 0.33vw solid;
+  text-underline-offset: 3px;
+}
+
+.hidden {
+  display: none;
 }

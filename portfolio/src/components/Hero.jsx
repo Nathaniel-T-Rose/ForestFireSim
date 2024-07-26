@@ -1,9 +1,41 @@
-import React from 'react'
+import { useState,useEffect } from 'react'
 import {WizardCanvas} from '.';
 
 import '../styles/hero.scss';
 
 const Hero = ({scrollContainer}) => {
+
+  const [selection,setSelection] = useState(0);
+  const selections = ['Projects', 'Experience', 'Contact'];
+
+  const handleIncrement = () => {
+    if(selection<selections.length-1){
+      setSelection(selection+1)
+    }
+  };
+  const handleDecrement = () => {
+    if(selection>0){
+      setSelection(selection-1)
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    e.preventDefault();
+    if( e.key === 'ArrowRight' ){
+      handleIncrement();
+    } else if ( e.key === 'ArrowLeft' ){
+      handleDecrement();
+    }
+  }
+
+  useEffect( () => {
+    window.addEventListener('keydown',handleKeyPress);
+    return () => {
+      window.removeEventListener('keydown',handleKeyPress);
+    }
+    },[handleKeyPress]);
+
+
   return (
     <div className='section'>
       <div id='hero' className='header' >
@@ -32,15 +64,25 @@ const Hero = ({scrollContainer}) => {
               </span>
             </div>
             <div className='header_nav'>
-              <div><i class="arrow right"></i>Projects</div>
-              <div><i class="arrow right"></i>Experience</div>
-              <div><i class="arrow right"></i>Contact</div>
+              {
+                selections.map((value,index) => {
+                  return(
+                    <div>
+                      <i className={`arrow right ${selection===index ? 'visible' : 'hidden'}`}
+                      ></i>
+                      <div className={selection===index ? 'visible' : ''}>
+                        {value}
+                      </div>
+                    </div>
+                  );
+                })
+              }
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Hero
