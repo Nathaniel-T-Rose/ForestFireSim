@@ -26,8 +26,8 @@ const CatMage = ( {scale, position}) => {
 const WizardScene = ({scrollContainer}) => {
   const [rotationX, setRotationX] = useState(0);
   const [rotationY, setRotationY] = useState(0);
-  const [scale, setScale] = useState([0,0,0]);
-  const [position, setPosition] = useState([1.75, -1.75, -0.5])
+  const [scale, setScale] = useState([1.66,1.66,1.66]);
+  const [position, setPosition] = useState([1.75, -2.75, -0.5])
 
 
   const handleScroll = () => {
@@ -57,11 +57,26 @@ const WizardScene = ({scrollContainer}) => {
     } 
   };
 
+  const handleKeyPress = () => {
+
+  };
+
+  useEffect( () => {
+    window.addEventListener('keydown',handleKeyPress);
+    return () => {
+      window.removeEventListener('keydown',handleKeyPress);
+    }
+    },[handleKeyPress]);
+
+    
   useEffect(() => {
-    handleResize();
-    window.addEventListener('scroll',handleScroll);
     window.addEventListener('resize', handleResize);
-  }, [scrollContainer]);
+    return () => {
+      window.removeEventListener('resize',handleResize);
+    }
+  }, [handleResize]);
+
+  useEffect( ()=> {handleResize()},[]);
 
   return (
     <Canvas 

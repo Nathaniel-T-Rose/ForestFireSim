@@ -3,10 +3,11 @@ import {WizardCanvas} from '.';
 
 import '../styles/hero.scss';
 
-const Hero = ({scrollContainer}) => {
+const Home = ({scrollContainer}) => {
 
   const [selection,setSelection] = useState(0);
-  const selections = ['Projects', 'Experience', 'Contact'];
+  const [inFocus, setInFocus] = useState(false);
+  const selections = ['Portfolio', 'Experience', 'Skills', 'Contact'];
 
   const handleIncrement = () => {
     if(selection<selections.length-1){
@@ -38,14 +39,16 @@ const Hero = ({scrollContainer}) => {
 
   return (
     <div className='section'>
-      <div id='hero' className='header' >
+      <div id='home' className='header' >
         <div className='header_content'>
           <div className='header_green'>
-          <div className="header_name ">
-              <h1 className='glitch' data-text='Nathaniel Rose'>
+          <div className="header_name "
+            onMouseEnter = {() => setInFocus(!inFocus)}
+          >
+              <h1 className={inFocus ? 'glitch': ''} data-text='Nathaniel Rose'>
                 Nathaniel Rose 
               </h1>
-              <p className='glitch' data-text='Software Developer'>Software Developer</p>
+              <p className={inFocus ? 'glitch': ''} data-text='Software Developer'>Software Developer</p>
           </div>
             <img src='src/assets/background.png' alt='' className='header_background' 
             />
@@ -67,7 +70,9 @@ const Hero = ({scrollContainer}) => {
               {
                 selections.map((value,index) => {
                   return(
-                    <div>
+                    <div className='nav_option' key={index}
+                      onClick={() => {selection!==index ? setSelection(index) : ''}}
+                    >
                       <i className={`arrow right ${selection===index ? 'visible' : 'hidden'}`}
                       ></i>
                       <div className={selection===index ? 'visible' : ''}>
@@ -85,4 +90,4 @@ const Hero = ({scrollContainer}) => {
   );
 }
 
-export default Hero
+export default Home;
