@@ -2,7 +2,8 @@ import { useState,useEffect } from 'react'
 import {WizardCanvas} from '.';
 
 import '../styles/hero.scss';
-
+import hillsImg from '../assets/background.png';
+import textboxImg from '../assets/textbox.png';
 const Home = ({scrollContainer}) => {
 
   const [selection,setSelection] = useState(0);
@@ -50,14 +51,14 @@ const Home = ({scrollContainer}) => {
               </h1>
               <p className={inFocus ? 'glitch': ''} data-text='Software Developer'>Software Developer</p>
           </div>
-            <img src='src/assets/background.png' alt='' className='header_background' 
+            <img src={hillsImg} alt='' className='header_background' 
             />
             <div className='header_cat'>
               <WizardCanvas scrollContainer={scrollContainer} />
             </div>
           </div>
           <div className='header_box'>
-            <img src='src/assets/textbox.png' alt=''  className='header_background'/>
+            <img src={textboxImg} alt=''  className='header_background'/>
             <div className='header_text'>
               <span className='glitch' data-text='Nathaniel:'>
               <b>{`Nathaniel: ${' '}`}</b>
