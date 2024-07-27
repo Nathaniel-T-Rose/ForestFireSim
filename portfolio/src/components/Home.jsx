@@ -8,7 +8,7 @@ const Home = ({scrollContainer}) => {
 
   const [selection,setSelection] = useState(0);
   const [inFocus, setInFocus] = useState(false);
-  const selections = ['Portfolio', 'Experience', 'Skills', 'Contact'];
+  const selections = ['Portfolio', 'Experience', 'About', 'Contact'];
 
   const handleIncrement = () => {
     if(selection<selections.length-1){
@@ -43,22 +43,22 @@ const Home = ({scrollContainer}) => {
       <div id='home' className='header' >
         <div className='header_content'>
           <div className='header_green'>
-          <div className="header_name "
-            onMouseEnter = {() => setInFocus(!inFocus)}
-          >
+            <div className="header_name "
+              onMouseEnter = {() => setInFocus(!inFocus)}
+            >
               <h1 className={inFocus ? 'glitch': ''} data-text='Nathaniel Rose'>
                 Nathaniel Rose 
               </h1>
               <p className={inFocus ? 'glitch': ''} data-text='Software Developer'>Software Developer</p>
-          </div>
-            <img src={hillsImg} alt='' className='header_background' 
+            </div>
+            <img src={hillsImg} alt='' className='header_background_hills' 
             />
             <div className='header_cat'>
               <WizardCanvas scrollContainer={scrollContainer} />
             </div>
           </div>
           <div className='header_box'>
-            <img src={textboxImg} alt=''  className='header_background'/>
+            <img src={textboxImg} alt=''  className='header_background_box'/>
             <div className='header_text'>
               <span className='glitch' data-text='Nathaniel:'>
               <b>{`Nathaniel: ${' '}`}</b>

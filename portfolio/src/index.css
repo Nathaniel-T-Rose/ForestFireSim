@@ -11,6 +11,12 @@
   font-weight: normal;
   font-style: normal;
 }
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
 * {
   margin: 0;
   padding: 0;
@@ -18,9 +24,15 @@
   scroll-behavior: smooth;
   color-scheme: light;
 }
-
+.app {
+  position: absolute;
+  width: 100vw;
+  max-height: 100%;
+  max-width: 100%;
+  height: 100%;
+}
 .wrapper {
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 10px;
@@ -29,65 +41,73 @@
 .header {
   font-family: fantasyFont, sans-serif;
   position: relative;
-  width: 100vw;
-  height: 100%;
+  width: 100%;
   left: 50%;
   transform: translate(-50%);
+  display: flex;
+  height: 100%;
+}
+
+.section {
+  height: 100%;
+  width: 100%;
 }
 
 .header_content{
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  position: relative;
+  flex: 1;
 }
 
 .header > img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
   left: 50%;
   transform: translate(-50%);
+  flex: auto;
 }
 
 .header_green {
   position: relative;
   z-index: 3;
-  max-height: 600px;
-  display: flex;
-  width: 100vw;
+  height: 66%;
+  width: 100%;
+  flex: auto;
 }
 
 .header_text {
   position: absolute;
-  top: 0;
-  left: 0;
-  margin: 3.5vw 5.0vw;
+  top: 15%;
+  left: 5%;
+  right: 5%;
   color: white;
-  font-size: 3vw;
+  font-size: calc(max(3.1vw,3.1vh));
 }
 
-.header_background {
+.header_background_hills {
+  height:100%;
   width: 100%;
-  height: 100%;
   object-fit: cover;
+}
+
+.header_background_box {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
 }
 .header_box {
   z-index: 4;
   position: relative;
   z-index: 3;
-  max-height: 600px;
+  height:34%;
   display: flex;
-  width: 100vw;
+  width: 100%;
   letter-spacing: .33vw;
-
+  align-items: center;
 }
-
 .header_cat {
   position:absolute;
   z-index: 4;
-  max-height: 600px;
-  height:max-content;
   width: 100%;
   height: 100%;
   top: 0;
@@ -96,33 +116,34 @@
 
 .header_name {
   font-family: fantasyFont;
-  font-size: 2.5vw;
+  font-size: calc(max(3vw,2vh));
   color: white;
   letter-spacing: .3vw;
   position: absolute;
   z-index: 11;
-  top: 40%;
+  top: 35%;
   left: 10%;
 }
 
 .header_nav {
   display: grid;
-  width: 95vw;
-  font-size: 3vw;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1.1fr 1.1fr .66fr 1.1fr;
+  width: 95%;
+  font-size: calc(max(3vw,3.1vh));
+  grid-template-columns: 1fr 1.1fr .7fr 1fr;
   position: absolute;
-  bottom:28%;
-  justify-items: center;
-  gap: 5%;
+  top: 61%;
+  left: 5%;
+  right: 5%;
+  justify-items: left;
   color: white;
   letter-spacing: .25vw;
+  gap: 1%;
 }
 
 .visible {
   display: inline-block;
-  text-decoration: underline 0.31vw;
-  text-underline-offset: .31vw;
+  text-decoration: underline max(0.31vw,0.31vh);
+  text-underline-offset: max(0.31vw,0.31vh);
 }
 
 .hidden {

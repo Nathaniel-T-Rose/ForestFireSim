@@ -39,22 +39,26 @@ const WizardScene = ({scrollContainer}) => {
   };
 
   const handleResize = () => {
-    if (window.innderWidth < 768) {
+    if (window.innerWidth < 400) {
+      setScale([.8,.8,.8])
+      setPosition([0, -3, -2])
+    } else if (window.innerWidth < 768) {
       setScale([1,1,1]);
-      setPosition([3, -1.3, -0.5]);
+      setPosition([2.25, -1.3, -0.5]);
     } else if (window.innerWidth < 1024){
-      setScale([1.33,1.33,1.33]);
+      setScale([1.3,1.3,1.3]);
       setPosition([2.25, -1.5, -0.5]);
     } else if (window.innerWidth < 1280){
       setScale([1.5,1.5,1.5]);
       setPosition([2.0, -1.85, -0.5]);
     } else if (window.innerWidth < 1536) {
-      setScale([1.66,1.66,1.66]);
-      setPosition([1.75, -2.5, -0.5]);
+      setScale([1.6,1.6,1.6]);
+      setPosition([2.5, -2.2, -0.5]);
     } else {
-      setScale([2,2,2]);
-      setPosition([1.75, -2.75, -0.5])
-    } 
+      setScale([1.7,1.7,1.7]);
+      setPosition([2.75, -2.3, -0.5])
+    }
+    console.log(scale,position); 
   };
 
   const handleKeyPress = () => {
@@ -68,7 +72,7 @@ const WizardScene = ({scrollContainer}) => {
     }
     },[handleKeyPress]);
 
-    
+
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     return () => {
