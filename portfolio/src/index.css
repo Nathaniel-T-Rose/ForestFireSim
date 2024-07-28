@@ -129,20 +129,20 @@ body, html {
   display: grid;
   width: 95%;
   font-size: calc(max(3vw,3.1vh));
-  grid-template-columns: 1fr 1.1fr .7fr 1fr;
+  grid-template-columns: .85fr .7fr .7fr 1fr;
   position: absolute;
-  top: 61%;
+  top: 63%;
   left: 5%;
   right: 5%;
   justify-items: left;
   color: white;
   letter-spacing: .25vw;
-  gap: 1%;
+  gap: 2%;
 }
 
 .visible {
   display: inline-block;
-  text-decoration: underline max(0.31vw,0.31vh);
+  text-decoration: underline max(0.31vw,0.31vh) !important;
   text-underline-offset: max(0.31vw,0.31vh);
 }
 

@@ -7,8 +7,8 @@ const projects = [
         'description': 'Full-Stack Book E-Commerce Site',
         'full': ' ',
         'tech': ['Django','React','PostgreSQL','Vite','CSS'].join(', '),
-        'gitLink':'',
-        'liveLink':'afdlj;fja;d',
+        'gitLink':'https://github.com/Nathaniel-T-Rose/Project-Dogear',
+        'liveLink':'',
     },
     {
         'name': 'Automated Book Recommendations',
@@ -16,7 +16,7 @@ const projects = [
         'description': 'AI Recommendation Script',
         'full': '',
         'tech': ['Python','Google Books API', 'OpenAI'].join(', '),
-        'gitLink':'',
+        'gitLink':'https://github.com/Nathaniel-T-Rose/Book_Recommender',
         'liveLink':'',
     },
     {
@@ -34,8 +34,8 @@ const projects = [
         'description': 'JRPG-Informed Portfolio Site',
         'full': '',
         'tech': ['React','SCSS'].join(', '),
-        'gitLink':'',
-        'liveLink':'',
+        'gitLink':'https://github.com/Nathaniel-T-Rose/Portfolio_Site',
+        'liveLink':'/',
     },
 ];
 

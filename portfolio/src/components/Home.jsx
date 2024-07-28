@@ -9,7 +9,7 @@ const Home = ({scrollContainer}) => {
 
   const [selection,setSelection] = useState(0);
   const [inFocus, setInFocus] = useState(false);
-  const selections = ['Portfolio', 'Experience', 'About', 'Contact'];
+  const selections = ['Portfolio', 'Skills', 'About', 'Contact'];
 
   const handleIncrement = () => {
     if(selection<selections.length-1){

@@ -12,14 +12,14 @@
     @extend %boxstyle;
     margin-top: 2.5%;
     margin-left: 7.5%;
-    width: 85%;
+    width: 80%;
     height: 90%;
     color: white;
 }
 
 .projects-container {
     height: 90%;
-    width: 82%;
+    width: 89%;
 }
 
 .menu-row {
@@ -33,8 +33,12 @@
 }
 
 .menu-row-focus {
-    box-shadow: 0 0 20px rgb(70, 70, 240);
-    cursor: pointer; 
+    box-shadow: 0 0 25px rgb(156, 160, 240);
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    cursor: pointer;
+    transform: scale(1.015) 
 }
 
 .menu-img-container {
@@ -93,6 +97,7 @@
     animation-name: movingUp;
     animation-duration: 0.5s;
     animation-timing-function: ease;
+    width: 100%;
 
 }
 

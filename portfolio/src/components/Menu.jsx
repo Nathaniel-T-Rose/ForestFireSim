@@ -84,8 +84,9 @@ const Menu = () => {
                 </div>
                 <div className='current-links'>
                     <ul>
+                        {!project.gitLink && !project.liveLink && <div>Select Project to View Links</div>}
                         {project.gitLink && <li><a href={project.gitLink} target="_blank" rel="noopener noreferrer" className='link'>View Code Source</a></li>}
-                        {project.liveLink && <li><a href={project.liveLink} target="_blank" className='link'>Live Link</a></li>}
+                        {project.liveLink && <li><a href={project.liveLink} target="_blank" className='link'>View Live Link</a></li>}
                     </ul>
                 </div>
             </aside>
