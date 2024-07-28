@@ -72,7 +72,7 @@ const Home = ({scrollContainer}) => {
                 selections.map((value,index) => {
                   return(
                     <div className='nav_option' key={index}
-                      onClick={() => {selection!==index ? setSelection(index) : ''}}
+                      onMouseEnter={() => {selection!==index ? setSelection(index) : ''}}
                     >
                       <i className={`arrow right ${selection===index ? 'visible' : 'hidden'}`}
                       ></i>

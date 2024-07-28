@@ -1,0 +1,114 @@
+@import 'mixins';
+
+.menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    font-size: larger;
+}
+
+.projects-list {
+    @extend %boxstyle;
+
+    margin-block: 5%;
+    margin-left: 7.5%;
+    width: 75%;
+    height: 90%;
+    color: white;
+}
+
+.projects-container {
+    height: 90%;
+    width: 100%;
+}
+
+.menu-row {
+    position: relative;
+	display: flex;
+    margin: 3%;
+    padding: 1%;
+    height: 22%;
+    font-size: max(0.7em,1.5vw);
+    gap: 5%;  
+}
+
+.menu-row-focus {
+    box-shadow: 0 0 20px rgb(70, 70, 240); 
+}
+
+.menu-img-container {
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+
+}
+
+.menu-img-continer > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-table {
+    display: inline-block;
+	position: relative;
+	margin-left: 5%;
+	border-spacing: 0px 0px;
+	line-height: 200%;
+	border-collapse: collapse;
+    align-items: center;
+    align-content: center;
+    text-justify: left;
+    width: 100%;
+    height: 100%;
+}
+
+.project-label {
+}
+
+.project-value {
+    padding-inline-start: 5%;;
+    width: 100%;
+}
+
+.aside {
+    position: absolute;
+    left:75%;
+    top: 15%;
+    z-index: 3;	
+    height: 80%;
+    width: 20%;
+    color: white;
+}
+
+.project-control {
+    @extend %boxstyle;
+    position: absolute;
+    padding: 5% 10%;
+    height: 62.5%;
+    animation-name: movingUp;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+
+}
+
+.project-control-label {
+    text-decoration: underline;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    font-size: 1.6em;
+}
+
+.project-control-list {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    gap: 10%;
+    justify-items: center;
+    font-size: 1.4em;
+}

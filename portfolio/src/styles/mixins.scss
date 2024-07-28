@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+%boxstyle {
+    background: radial-gradient(-180px 0px,circle ,#0053ad 100px,#001b85 350px,#000223);
+    background: -moz-radial-gradient(-180px 0px,circle ,#0053ad 100px,#001b85 350px,#000223);
+    background: -webkit-radial-gradient(-180px 0px,circle ,#0053ad 100px,#001b85 350px,#000223);
+    background: -o-radial-gradient(-180px 0px,circle ,#0053ad 100px,#001b85 350px,#000223);
+    border: 3.5px solid rgb(240, 230, 230);
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    box-sizing: border-box;     
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
