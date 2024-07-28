@@ -6,9 +6,9 @@ const projects = [
         'image':dogear,
         'description': 'Full-Stack Book E-Commerce Site',
         'full': ' ',
-        'tech': ['Django','React','Vite','CSS'].join(', '),
+        'tech': ['Django','React','PostgreSQL','Vite','CSS'].join(', '),
         'gitLink':'',
-        'liveLink':'',
+        'liveLink':'afdlj;fja;d',
     },
     {
         'name': 'Automated Book Recommendations',

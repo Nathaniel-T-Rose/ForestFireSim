@@ -7,6 +7,7 @@ import '../styles/menu.scss'
 
 const Menu = () => {
     const [focus,setFocus] = useState('');
+    const [project,setProject] = useState({});
 
   return (
     <section className="menu">
@@ -18,7 +19,9 @@ const Menu = () => {
                         <div 
                             key={index} 
                             className={focus===index ?'menu-row menu-row-focus' :'menu-row'}
-                            onMouseEnter={() => {setFocus(index)}}
+                            onMouseEnter={() => {
+                                setFocus(index)}}
+                            onClick = {() => {setProject(project)}}
                         >
                             <div className='menu-img-container'>
                                 <img
@@ -28,8 +31,8 @@ const Menu = () => {
                             <table key={index} className='project-table'>
                                 <tbody >
                                     <tr>
-                                        <td class='project-label'>Project:</td>
-                                        <td class='project-value'>{project.name}</td>
+                                        <td className='project-label'>Project:</td>
+                                        <td className='project-value'>{project.name}</td>
                                     </tr>
                                     <tr>
                                         <td className='project-label'>About: </td>
@@ -59,25 +62,34 @@ const Menu = () => {
                     <div className='project-control-label'>Select Project</div>
                     <ul className='project-control-list'>
                         {
-                            projects.map((prj,index) => {
+                            projects.map((project,index) => {
                                 return(
-                                    <li key={index}>
-                                        {prj.name}
+                                    <li key={index}
+                                        onMouseEnter={() => {
+                                            setFocus(index)}}
+                                        onClick = {() => {setProject(project)}}
+                                    >
+                                        <i className={`rightArrow ${focus===index ? 'visible' : 'hidden'}`}
+                                        />
+                                        {project.name}
                                     </li>
                                 )
                             }
                             )
                         }
                         <li>
-                            <div > Quit </div>
+                            <Link to='/' className='link'> Quit </Link>
                         </li>
                     </ul>
                 </div>
-                <ul id="current-links">
-                    <li>Time<span id ="currentTime">0<span id = "colon">:</span>58:26</span></li>
-                    {<li>Live Link<span id ="gilAmount">435</span></li>}
-                </ul>
+                <div className='current-links'>
+                    <ul>
+                        {project.gitLink && <li><a href={project.gitLink} target="_blank" rel="noopener noreferrer" className='link'>View Code Source</a></li>}
+                        {project.liveLink && <li><a href={project.liveLink} target="_blank" className='link'>Live Link</a></li>}
+                    </ul>
+                </div>
             </aside>
+            
         </div>
     </section>
   );

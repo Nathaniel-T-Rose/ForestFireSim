@@ -80,19 +80,7 @@ text set in the data-text attribute. */
   }
   }
 
-  .arrow {
-    position: relative;
-    border: solid white;
-    border-width: 0 max(.4vw,.4vh) max(.4vw,.4vh) 0;
-    display: inline-block;
-    padding: 0.3vw;
-    left: -5%;
-  }
 
-  .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
 
   .nav_option{
     display: block;

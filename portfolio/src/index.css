@@ -153,3 +153,18 @@ body, html {
 .menu {
   font-family: fantasyFont;
 }
+
+.rightArrow {
+  position: relative;
+  border: solid white;
+  border-width: 0 max(.4vw,.4vh) max(.4vw,.4vh) 0;
+  padding: 0.3vw;
+  left: -5%;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}

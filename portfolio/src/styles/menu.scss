@@ -10,39 +10,40 @@
 
 .projects-list {
     @extend %boxstyle;
-
-    margin-block: 5%;
+    margin-top: 2.5%;
     margin-left: 7.5%;
-    width: 75%;
+    width: 85%;
     height: 90%;
     color: white;
 }
 
 .projects-container {
     height: 90%;
-    width: 100%;
+    width: 82%;
 }
 
 .menu-row {
     position: relative;
 	display: flex;
     margin: 3%;
-    padding: 1%;
+    padding-bottom: 1%;
     height: 22%;
     font-size: max(0.7em,1.5vw);
     gap: 5%;  
 }
 
 .menu-row-focus {
-    box-shadow: 0 0 20px rgb(70, 70, 240); 
+    box-shadow: 0 0 20px rgb(70, 70, 240);
+    cursor: pointer; 
 }
 
 .menu-img-container {
-    width: 20%;
+    padding: 1%;
+    width: 22.5%;
     height: 100%;
     overflow: hidden;
     display: inline-block;
-    position: relative;
+    align-items: center;
 
 }
 
@@ -76,8 +77,8 @@
 
 .aside {
     position: absolute;
-    left:75%;
-    top: 15%;
+    left:77.5%;
+    top: 7.5%;
     z-index: 3;	
     height: 80%;
     width: 20%;
@@ -110,5 +111,30 @@
     width: 100%;
     gap: 10%;
     justify-items: center;
+    font-size: 1.4em;
+}
+
+.project-control-list>li:hover {
+    cursor: pointer;
+}
+
+.current-links {
+    @extend %boxstyle;
+    position: absolute;
+    height:20%;
+    width: 100%;
+    top: 80%;
+    padding: 7.5% 10%;
+}
+
+.current-links > ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    gap: 20%;
+    align-items: center;
+
     font-size: 1.4em;
 }

@@ -4,6 +4,7 @@ import {WizardCanvas} from '.';
 import '../styles/hero.scss';
 import hillsImg from '../assets/background.png';
 import textboxImg from '../assets/textbox.png';
+import { Link } from 'react-router-dom';
 const Home = ({scrollContainer}) => {
 
   const [selection,setSelection] = useState(0);
@@ -74,11 +75,11 @@ const Home = ({scrollContainer}) => {
                     <div className='nav_option' key={index}
                       onMouseEnter={() => {selection!==index ? setSelection(index) : ''}}
                     >
-                      <i className={`arrow right ${selection===index ? 'visible' : 'hidden'}`}
+                      <i className={`rightArrow ${selection===index ? 'visible' : 'hidden'}`}
                       ></i>
-                      <div className={selection===index ? 'visible' : ''}>
+                      <Link to={`/${value}`} className={`link ${selection===index ? 'visible' : ''} `}>
                         {value}
-                      </div>
+                      </Link>
                     </div>
                   );
                 })
