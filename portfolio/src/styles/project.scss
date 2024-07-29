@@ -1,0 +1,48 @@
+.project {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2.5%;
+    font-size: max(0.9em, 2.2vw);
+    gap: 2%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.project > h1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    font-size: max(1.3em, 5vw);
+    letter-spacing: 0.5vw;
+}
+
+.project > h2 {
+    border-bottom: 2px white solid;
+}
+
+.project > div {
+    text-align: center;
+    justify-content: left;
+    width: 90%;
+    margin-bottom: 2%;
+}
+
+.project > div > p {
+    margin: 2%;
+}
+
+.project-image-wrapper {
+    display: flex;
+    height: 20%;
+    width: 20%;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.project-image-wrapper > img {
+    object-fit: contain;
+    flex-shrink: 1;
+}

@@ -15,11 +15,22 @@
     width: 80%;
     height: 90%;
     color: white;
+    overflow: hidden
 }
 
 .projects-container {
-    height: 90%;
+    height: 95%;
     width: 89%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-container {
+    height: 25%;
+}
+
+.project-expanded {
+    height: 100%;
 }
 
 .menu-row {
@@ -27,7 +38,7 @@
 	display: flex;
     margin: 3%;
     padding-bottom: 1%;
-    height: 22%;
+    height: 100%;
     font-size: max(0.7em,1.5vw);
     gap: 5%;  
 }
@@ -64,11 +75,12 @@
 	border-spacing: 0px 0px;
 	line-height: 200%;
 	border-collapse: collapse;
-    align-items: center;
     align-content: center;
     text-justify: left;
     width: 100%;
     height: 100%;
+    white-space:nowrap; 
+    transform-origin: left;
 }
 
 .project-label {
@@ -93,7 +105,7 @@
     @extend %boxstyle;
     position: absolute;
     padding: 5% 10%;
-    height: 62.5%;
+    height: 60.5%;
     animation-name: movingUp;
     animation-duration: 0.5s;
     animation-timing-function: ease;
@@ -104,19 +116,22 @@
 .project-control-label {
     text-decoration: underline;
     margin-top: 5%;
-    margin-bottom: 10%;
-    font-size: 1.6em;
+    font-size: max(1em,3vw);
+}
+
+.project-control-label:hover {
+    cursor: pointer;
 }
 
 .project-control-list {
-    height: 100%;
+    height: 90%;
     list-style: none;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     width: 100%;
-    gap: 10%;
-    justify-items: center;
-    font-size: 1.4em;
+    align-items: stretch;
+    justify-content: space-evenly;
+    font-size: max(0.7em,2.6vw);
 }
 
 .project-control-list>li:hover {
@@ -136,10 +151,9 @@
     height: 100%;
     list-style: none;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     width: 100%;
-    gap: 20%;
-    align-items: center;
-
-    font-size: 1.4em;
+    justify-content: space-evenly;
+    
+    font-size: max(0.7em,2.5vw);
 }

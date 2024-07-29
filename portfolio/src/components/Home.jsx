@@ -64,7 +64,7 @@ const Home = ({scrollContainer}) => {
               <span className='glitch' data-text='Nathaniel:'>
               <b>{`Nathaniel: ${' '}`}</b>
               </span>
-              <span className='typewriter'>
+              <span>
                 Hey there! I'm a full-stack software developer and nostalgia connoisseur with a keen interest in all things web dev.     
               </span>
             </div>

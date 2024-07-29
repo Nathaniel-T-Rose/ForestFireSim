@@ -1,7 +1,7 @@
 import Home from './Home';
-import Portfolio from './Portfolio';
+import Project from './Project';
 import Menu from './Menu';
 import Contact from './Contact';
 import WizardCanvas from './Wizard';
 
-export {Home, Portfolio,Menu,Contact,WizardCanvas};
+export {Home, Project,Menu,Contact,WizardCanvas};
