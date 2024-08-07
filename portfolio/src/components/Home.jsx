@@ -9,7 +9,8 @@ const Home = ({scrollContainer}) => {
 
   const [selection,setSelection] = useState(0);
   const [inFocus, setInFocus] = useState(false);
-  const selections = ['Portfolio', 'Skills', 'About', 'Contact'];
+  const selections = {'Portfolio':'/portfolio', 
+    'Skills':'/profile?page=skills', 'About':'/profile?page=about', 'Contact':'/contact'};
 
   const handleIncrement = () => {
     if(selection<selections.length-1){
@@ -70,15 +71,15 @@ const Home = ({scrollContainer}) => {
             </div>
             <div className='header_nav'>
               {
-                selections.map((value,index) => {
+                Object.keys(selections).map((key,index) => {
                   return(
                     <div className='nav_option' key={index}
                       onMouseEnter={() => {selection!==index ? setSelection(index) : ''}}
                     >
                       <i className={`rightArrow ${selection===index ? 'visible' : 'hidden'}`}
                       ></i>
-                      <Link to={`/${value}`} className={`link ${selection===index ? 'visible' : ''} `}>
-                        {value}
+                      <Link to={selections[key]} className={`link ${selection===index ? 'visible' : ''} `}>
+                        {key}
                       </Link>
                     </div>
                   );

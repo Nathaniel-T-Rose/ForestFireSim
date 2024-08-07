@@ -116,7 +116,7 @@
 .project-control-label {
     text-decoration: underline;
     margin-top: 5%;
-    font-size: max(1em,3vw);
+    font-size: max(1.2em,3vw);
 }
 
 .project-control-label:hover {
@@ -131,7 +131,7 @@
     width: 100%;
     align-items: stretch;
     justify-content: space-evenly;
-    font-size: max(0.7em,2.6vw);
+    font-size: max(1em,2.6vw);
 }
 
 .project-control-list>li:hover {
@@ -155,5 +155,5 @@
     width: 100%;
     justify-content: space-evenly;
     
-    font-size: max(0.7em,2.5vw);
+    font-size: max(1.1em,2.5vw);
 }
