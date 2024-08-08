@@ -6,7 +6,7 @@ const About = () => {
     <div className='about'>
         <p>Hey there! My name is Nathaniel, and I like to design all sorts of things! 
         My creative interests vary, and I bounce between learning new development frameworks, UI tricks, and spending time writing. 
-        I'm a firm believer in development as an outlet for our odd, creative passions and love bringing ideas to life. 
+        I'm a firm believer in development as an outlet for our odd, creative passions and I love bringing ideas to life. 
         </p> 
 
         <br />     

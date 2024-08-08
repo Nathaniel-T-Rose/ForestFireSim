@@ -8,6 +8,7 @@ import cakePix from '../assets/cake.png'
 import outsidePix from '../assets/outside.png'
 import selfPix from '../assets/self.png'
 import { useSearchParams } from 'react-router-dom'
+import LinkBar from './LinkBar'
 
 const Profile = (props) => {
     const [searchParams] = useSearchParams();
@@ -17,11 +18,11 @@ const Profile = (props) => {
     <div className='profile'>
         <div className='col1'>
             <header className='intro'>
-                <h3>Conceptual Engineer</h3>
+                <h3>A Conceptual Engineer</h3>
                 <h1>Nathaniel</h1>
                 <hr />
                 <h4>Starting Class: Software Developer</h4>
-                <h4>PLACEHOLDER - GIT, LINKEDIN, ETC</h4>
+                <LinkBar />
             </header>
             <section className='info'>
                 <ul className='page-options'>
@@ -45,14 +46,14 @@ const Profile = (props) => {
             </section>
         </div>
         <div className='col2'>
-            <div className='img-container'>
-                <img src={selfPix}></img>
+            <div className='img-container img1'>
+                <img src={selfPix} />
             </div>
-            <div className='img-container'>
-                <img src={outsidePix}></img>
+            <div className='img-container img2'>
+                <img src={outsidePix} />
             </div>
-            <div className='img-container'>
-                <img src={cakePix}></img>
+            <div className='img-container img3'>
+                <img src={cakePix} />
             </div>
         </div>
     </div>

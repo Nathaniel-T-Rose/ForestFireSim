@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react'
-import {WizardCanvas} from '.';
+import {WizardScene} from '.';
 
 import '../styles/hero.scss';
 import hillsImg from '../assets/background.png';
@@ -56,7 +56,7 @@ const Home = ({scrollContainer}) => {
             <img src={hillsImg} alt='' className='header_background_hills' 
             />
             <div className='header_cat'>
-              <WizardCanvas scrollContainer={scrollContainer} />
+              <WizardScene scrollContainer={scrollContainer} />
             </div>
           </div>
           <div className='header_box'>
@@ -66,7 +66,7 @@ const Home = ({scrollContainer}) => {
               <b>{`Nathaniel: ${' '}`}</b>
               </span>
               <span>
-                Hey there! I'm a full-stack software developer and nostalgia connoisseur with a keen interest in all things web dev.     
+                Welcome! I'm a full-stack software developer and nostalgia connoisseur with a keen interest in all things web dev.     
               </span>
             </div>
             <div className='header_nav'>
